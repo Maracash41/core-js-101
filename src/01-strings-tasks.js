@@ -226,10 +226,21 @@ function getRectangleString(width, height) {
  *    => 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm'
  *
  */
-function encodeToRot13(/* str */) {
-  throw new Error('Not implemented');
+function encodeToRot13(str) {
+  const firstHalf = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+  const secondHalf = 'NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm';
+  const input = str.split('');
+  const output = input.map((char) => {
+    if (char === ' ') {
+      return ' ';
+    }
+    if (firstHalf.indexOf(char) === -1) {
+      return char;
+    }
+    return secondHalf[firstHalf.indexOf(char)];
+  }).join('');
+  return output;
 }
-
 /**
  * Returns true if the value is string; otherwise false.
  * @param {string} value
