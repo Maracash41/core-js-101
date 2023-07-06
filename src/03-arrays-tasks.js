@@ -295,7 +295,6 @@ function get3TopItems(arr) {
   return arr.sort((a, b) => a - b).reverse().splice(0, 3);
 }
 
-
 /**
  * Returns the number of positive numbers from specified array
  *
@@ -309,8 +308,8 @@ function get3TopItems(arr) {
  *   [ null, 1, 'elephant' ] => 1
  *   [ 1, '2' ] => 1
  */
-function getPositivesCount(/* arr */) {
-  throw new Error('Not implemented');
+function getPositivesCount(arr) {
+  return arr.filter((item) => (typeof item === 'number') && item > 0).length;
 }
 
 /**
