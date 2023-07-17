@@ -7,7 +7,6 @@
  *                                                                                           *
  ******************************************************************************************* */
 
-
 /**
  * Returns an area of a rectangle given by width and height.
  *
@@ -22,7 +21,6 @@
 function getRectangleArea(width, height) {
   return width * height;
 }
-
 
 /**
  * Returns a circumference of circle given by radius.
@@ -90,7 +88,6 @@ function getLinearEquationRoot(a, b) {
   return -b / a;
 }
 
-
 /**
  * Returns an angle (in radians) between two vectors given by xi and yi,
  * coordinates in Cartesian plane.
@@ -130,9 +127,8 @@ function getAngleBetweenVectors(x1, y1, x2, y2) {
  *     0     => 0
  */
 function getLastDigit(value) {
-  return String(value).at(-1);
+  return String(value).split('').pop();
 }
-
 
 /**
  * Returns a number by given string representation.
@@ -165,7 +161,6 @@ function parseNumberFromString(value) {
 function getParallelepipedDiagonal(a, b, c) {
   return Math.sqrt((a ** 2 + b ** 2 + c ** 2));
 }
-
 
 /**
  * Returns the number rounded to specified power of 10.
